@@ -1,6 +1,6 @@
 const productos = [];
 
-// Cargar productos desde productos.json con Fetch
+// Cargas productos desde productos.json con Fetch
 fetch("productos.json")
     .then(response => {
         if (!response.ok) {
@@ -30,13 +30,13 @@ const sinonimos = {
 
 const carrito = [];
 
-// eliminar acentos y pasar a minúsculas
+// elimina acentos y pasar a minúsculas
 function normalizarPalabra(palabra) {
     const palabraSinAcentos = palabra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     return palabraSinAcentos.toLowerCase();
 }
 
-// Para mostrar productos filtrados
+// Ver productos filtrados
 function buscarProductos() {
     const busqueda = document.getElementById("menu-buscar").value.toLowerCase().trim();
     const palabrasBusqueda = busqueda.split(" ").map(normalizarPalabra);
@@ -59,7 +59,7 @@ function buscarProductos() {
     mostrarProductos(productosFiltrados);
 }
 
-// Renderiza los productos en la página
+// Renderiza los productos
 function mostrarProductos(filtrados) {
     const contenedor = document.querySelector(".lista-productos");
     contenedor.innerHTML = "";
@@ -76,29 +76,29 @@ function mostrarProductos(filtrados) {
 // Crea HTML dinámico para un producto
 function crearHTMLProducto(producto) {
     return `
-      <div class="producto">
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <p>${producto.tipo} para ${producto.genero}</p>
-        <div class="precio">$${producto.precio}</div>
-        <label for="talle-${producto.id}">Talle:</label>
-        <select id="talle-${producto.id}">
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-        </select>
-        <button class="boton-comprar" onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
-      </div>
+        <div class="producto">
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <h3>${producto.nombre}</h3>
+            <p>${producto.tipo} para ${producto.genero}</p>
+            <div class="precio">$${producto.precio}</div>
+            <label for="talle-${producto.id}">Talle:</label>
+            <select id="talle-${producto.id}">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="boton-comprar" onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+        </div>
     `;
 }
 
-// Guarda el carrito en localStorage
+    // Guarda el carrito en localStorage
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-// Carga el carrito desde localStorage
+    // Carga el carrito desde localStorage
 function cargarCarrito() {
     const carritoGuardado = localStorage.getItem("carrito");
     if (carritoGuardado) {
@@ -107,7 +107,7 @@ function cargarCarrito() {
     }
 }
 
-// Agrega un producto al carrito
+    // Agrega un producto al carrito
 function agregarAlCarrito(idProducto) {
     const talleSeleccionado = document.getElementById(`talle-${idProducto}`).value;
     const productoEnCarrito = carrito.find(item => item.id === idProducto && item.talle === talleSeleccionado);
@@ -122,7 +122,7 @@ function agregarAlCarrito(idProducto) {
     mostrarCarrito();
     guardarCarrito();
 
-    // Notifica que el producto se agregó al carrito con SweetAlert2
+    // Notificacion con sweetalert2 cuando agrega un producto
     const producto = productos.find(p => p.id === idProducto);
     Swal.fire({
         title: 'Producto agregado al carrito',
@@ -137,23 +137,22 @@ function agregarAlCarrito(idProducto) {
     });
 }
 
-// Gestiona el contenido que se encuentra en el carrito
 function mostrarCarrito() {
     const contenedorCarrito = document.getElementById("carrito");
 
     if (carrito.length === 0) {
-        contenedorCarrito.style.display = "none"; // Oculta el carro si esta vacío
+        contenedorCarrito.style.display = "none"; 
         return;
     }
 
-    contenedorCarrito.style.display = "block"; // Lo muestra si hay por lo menos 1 producto
-    contenedorCarrito.innerHTML = "";
-
+    contenedorCarrito.style.display = "block"; 
+    contenedorCarrito.innerHTML = ""; 
     let total = 0;
     carrito.forEach((producto, index) => {
         const subtotal = producto.precio * producto.cantidad;
         total += subtotal;
 
+        // Crea cada producto del carrito
         const item = document.createElement("div");
         item.classList.add("carrito-item");
         item.innerHTML = `
@@ -166,20 +165,55 @@ function mostrarCarrito() {
         contenedorCarrito.appendChild(item);
     });
 
+
     const totalContainer = document.createElement("div");
     totalContainer.classList.add("carrito-total");
     totalContainer.innerHTML = `<strong>Total a pagar: $${total}</strong>`;
+    // container para apilar los botones
+    const botonesContainer = document.createElement("div");
+    botonesContainer.classList.add("botones-container");
 
+    const botonVerProductos = document.createElement("button");
+    botonVerProductos.textContent = "Ver más productos";
+    botonVerProductos.classList.add("btn-ver-mas");
+    botonVerProductos.onclick = () => {
+        contenedorCarrito.style.display = "none";
+    };
+
+    // Botón "Realizar Pedido"
     const botonPedido = document.createElement("button");
     botonPedido.textContent = "Realizar Pedido";
     botonPedido.classList.add("btn-realizar-pedido");
     botonPedido.onclick = mostrarVentanaPedido;
 
-    totalContainer.appendChild(botonPedido);
+    // Para agregar botones al contenedor
+    botonesContainer.appendChild(botonVerProductos);
+    botonesContainer.appendChild(botonPedido);
+
+    // Para agregar el contenedor de botones y total al carrito
+    totalContainer.appendChild(botonesContainer);
     contenedorCarrito.appendChild(totalContainer);
 }
 
-// Ventana de resumen del pedido con SweetAlert2
+function eliminarDelCarrito(indice) {
+    carrito.splice(indice, 1); // Elimina el producto del array
+    guardarCarrito(); // Actualiza el localStorage
+    mostrarCarrito(); 
+}
+
+function cambiarCantidad(index, cambio) {
+    const producto = carrito[index];
+    producto.cantidad += cambio;
+
+    if (producto.cantidad <= 0) {
+        eliminarDelCarrito(index);
+    } else {
+        guardarCarrito();
+        mostrarCarrito(); // Para refrescar el carrito
+    }
+}
+
+    // Ventana de resumen del pedido
 function mostrarVentanaPedido() {
     let resumenCarrito = carrito.map(producto => {
         const subtotal = producto.precio * producto.cantidad;
@@ -188,7 +222,7 @@ function mostrarVentanaPedido() {
     
     const total = carrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
 
-    // Ventana de confirmación con SweetAlert2
+    // Ventana de confirmación con sweetalert2
     Swal.fire({
         title: 'Confirmar Pedido',
         html: `
