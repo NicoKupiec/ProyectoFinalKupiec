@@ -1,7 +1,7 @@
 const productos = [];
 
 // Cargar productos desde productos.json con Fetch
-fetch("../productos.json")
+fetch("productos.json")
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
