@@ -1,0 +1,314 @@
+[
+    {
+        "id": 1,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Jean",
+        "precio": 5000,
+        "genero": "Hombre",
+        "imagen": "images/pantalon-jean-hombre.PNG"
+    },
+    {
+        "id": 2,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Cargo",
+        "precio": 6000,
+        "genero": "Hombre",
+        "imagen": "images/pantalon-cargo-hombre.PNG"
+    },
+    {
+        "id": 3,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Chino",
+        "precio": 10000,
+        "genero": "Hombre",
+        "imagen": "images/pantalon-chino-hombre.PNG"
+    },
+    {
+        "id": 4,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Jogging",
+        "precio": 3000,
+        "genero": "Hombre",
+        "imagen": "images/pantalon-jogging-hombre.PNG"
+    },
+    {
+        "id": 5,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Formal",
+        "precio": 12000,
+        "genero": "Hombre",
+        "imagen": "images/pantalon-formal-hombre.PNG"
+    },
+    {
+        "id": 6,
+        "tipo": "Camisa",
+        "nombre": "Camisa Denim",
+        "precio": 7000,
+        "genero": "Hombre",
+        "imagen": "images/camisa-denim-hombre.PNG"
+    },
+    {
+        "id": 7,
+        "tipo": "Camisa",
+        "nombre": "Camisa Formal",
+        "precio": 9000,
+        "genero": "Hombre",
+        "imagen": "images/camisa-formal-hombre.PNG"
+    },
+    {
+        "id": 8,
+        "tipo": "Camisa",
+        "nombre": "Camisa a Cuadros",
+        "precio": 6000,
+        "genero": "Hombre",
+        "imagen": "images/camisa-cuadros-hombre.PNG"
+    },
+    {
+        "id": 9,
+        "tipo": "Camisa",
+        "nombre": "Camisa de Lino",
+        "precio": 8000,
+        "genero": "Hombre",
+        "imagen": "images/camisa-lino-hombre.PNG"
+    },
+    {
+        "id": 10,
+        "tipo": "Camisa",
+        "nombre": "Camisa Entallada",
+        "precio": 9000,
+        "genero": "Hombre",
+        "imagen": "images/camisa-entallada-hombre.PNG"
+    },
+    {
+        "id": 11,
+        "tipo": "Remera",
+        "nombre": "Remera Clásica",
+        "precio": 3000,
+        "genero": "Hombre",
+        "imagen": "images/remera-clasica-hombre.PNG"
+    },
+    {
+        "id": 12,
+        "tipo": "Remera",
+        "nombre": "Remera Deportiva",
+        "precio": 3000,
+        "genero": "Hombre",
+        "imagen": "images/remera-deportiva-hombre.PNG"
+    },
+    {
+        "id": 13,
+        "tipo": "Remera",
+        "nombre": "Remera Polo",
+        "precio": 5000,
+        "genero": "Hombre",
+        "imagen": "images/remera-polo-hombre.PNG"
+    },
+    {
+        "id": 14,
+        "tipo": "Remera",
+        "nombre": "Remera Gráfica",
+        "precio": 4000,
+        "genero": "Hombre",
+        "imagen": "images/remera-grafica-hombre.PNG"
+    },
+    {
+        "id": 15,
+        "tipo": "Remera",
+        "nombre": "Remera Chomba",
+        "precio": 4500,
+        "genero": "Hombre",
+        "imagen": "images/remera-chomba-hombre.PNG"
+    },
+    {
+        "id": 16,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Lisa",
+        "precio": 3000,
+        "genero": "Hombre",
+        "imagen": "images/musculosa-lisa-hombre.PNG"
+    },
+    {
+        "id": 17,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Deportiva",
+        "precio": 5000,
+        "genero": "Hombre",
+        "imagen": "images/musculosa-deportiva-hombre.PNG"
+    },
+    {
+        "id": 18,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa de Algodón",
+        "precio": 3000,
+        "genero": "Hombre",
+        "imagen": "images/musculosa-algodon-hombre.PNG"
+    },
+    {
+        "id": 19,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Estampada",
+        "precio": 4000,
+        "genero": "Hombre",
+        "imagen": "images/musculosa-estampada-hombre.PNG"
+    },
+    {
+        "id": 20,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Slim Fit",
+        "precio": 5000,
+        "genero": "Hombre",
+        "imagen": "images/musculosa-slimfit-hombre.PNG"
+    },
+    {
+        "id": 21,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Palazzo",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/pantalon-palazzo-mujer.PNG"
+    },
+    {
+        "id": 22,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón de Jean",
+        "precio": 4000,
+        "genero": "Mujer",
+        "imagen": "images/pantalon-jean-mujer.PNG"
+    },
+    {
+        "id": 23,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Culotte",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/pantalon-culotte-mujer.PNG"
+    },
+    {
+        "id": 24,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón Jogging",
+        "precio": 4000,
+        "genero": "Mujer",
+        "imagen": "images/pantalon-jogging-mujer.PNG"
+    },
+    {
+        "id": 25,
+        "tipo": "Pantalón",
+        "nombre": "Pantalón de Vestir",
+        "precio": 9000,
+        "genero": "Mujer",
+        "imagen": "images/pantalon-vestir-mujer.PNG"
+    },
+    {
+        "id": 26,
+        "tipo": "Camisa",
+        "nombre": "Camisa Blusa",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/camisa-blusa-mujer.PNG"
+    },
+    {
+        "id": 27,
+        "tipo": "Camisa",
+        "nombre": "Camisa de Seda",
+        "precio": 7000,
+        "genero": "Mujer",
+        "imagen": "images/camisa-seda-mujer.PNG"
+    },
+    {
+        "id": 28,
+        "tipo": "Camisa",
+        "nombre": "Camisa de Algodón",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/camisa-algodon-mujer.PNG"
+    },
+    {
+        "id": 29,
+        "tipo": "Camisa",
+        "nombre": "Camisa Oversize",
+        "precio": 6000,
+        "genero": "Mujer",
+        "imagen": "images/camisa-oversize-mujer.PNG"
+    },
+    {
+        "id": 30,
+        "tipo": "Camisa",
+        "nombre": "Camisa Estampada",
+        "precio": 6000,
+        "genero": "Mujer",
+        "imagen": "images/camisa-estampada-mujer.PNG"
+    },
+    {
+        "id": 31,
+        "tipo": "Remera",
+        "nombre": "Remera Crop Top",
+        "precio": 4000,
+        "genero": "Mujer",
+        "imagen": "images/remera-croptop-mujer.PNG"
+    },
+    {
+        "id": 32,
+        "tipo": "Remera",
+        "nombre": "Remera Básica",
+        "precio": 3000,
+        "genero": "Mujer",
+        "imagen": "images/remera-basica-mujer.PNG"
+    },
+    {
+        "id": 33,
+        "tipo": "Remera",
+        "nombre": "Remera Gráfica",
+        "precio": 4500,
+        "genero": "Mujer",
+        "imagen": "images/remera-grafica-mujer.PNG"
+    },
+    {
+        "id": 34,
+        "tipo": "Remera",
+        "nombre": "Remera en V",
+        "precio": 4000,
+        "genero": "Mujer",
+        "imagen": "images/remera-v-mujer.PNG"
+    },
+    {
+        "id": 35,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Casual",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/musculosa-casual-mujer.PNG"
+    },
+    {
+        "id": 36,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Deportiva",
+        "precio": 6000,
+        "genero": "Mujer",
+        "imagen": "images/musculosa-deportiva-mujer.PNG"
+    },
+    {
+        "id": 37,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Crop",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/musculosa-crop-mujer.PNG"
+    },
+    {
+        "id": 38,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa Estampada",
+        "precio": 5000,
+        "genero": "Mujer",
+        "imagen": "images/musculosa-estampada-mujer.PNG"
+    },
+    {
+        "id": 39,
+        "tipo": "Musculosa",
+        "nombre": "Musculosa de Encaje",
+        "precio": 6000,
+        "genero": "Mujer",
+        "imagen": "images/musculosa-encaje-mujer.PNG"
+    }
+]
