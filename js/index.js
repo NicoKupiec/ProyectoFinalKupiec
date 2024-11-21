@@ -248,3 +248,8 @@ function mostrarVentanaPedido() {
 cargarCarrito();
 document.getElementById("menu-buscar").addEventListener("input", buscarProductos);
 
+document.getElementById("btn-ver-carrito").addEventListener("click", () => {
+    const contenedorCarrito = document.getElementById("carrito");
+    contenedorCarrito.style.display = "block"; // Muestra el carrito
+});
+
