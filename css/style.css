@@ -241,11 +241,6 @@ footer {
   background-color: #222;
 }
 
-.row {
-  height: auto;
-  max-height: 150px;
-}
-
 footer a{
   text-decoration: none;
   font-size: 15px;
@@ -424,7 +419,7 @@ font-size: 16px;
   }
 }
 
-/* carrito responsive */
+/* carrito para dispositivos pequeños */
 @media (max-width: 768px) {
   #carrito {
     width: 97%;
@@ -449,11 +444,12 @@ font-size: 16px;
   }
 }
 
+/* boton carrito dispositivos pequeños */
 @media (max-width: 768px) {
   .btn-carrito {
       position: fixed;
-      bottom: 20px; /* Mismo nivel que el botón de WhatsApp */
-      right: 90px; /* A la izquierda del botón de WhatsApp */
+      bottom: 20px;
+      right: 90px;
       z-index: 1000;
       background-color: #007bff;
       color: white;
@@ -485,6 +481,7 @@ font-size: 16px;
   }
 
   .whatsapp-btn:hover,
+
   .btn-carrito:hover {
       transform: scale(1.1);
   }
