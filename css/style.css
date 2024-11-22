@@ -224,8 +224,11 @@ header div {
 
 .btn-realizar-pedido {
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-realizar-pedido:hover {
@@ -367,6 +370,9 @@ footer i{
   background-color: #666;
   color: #fff;
   border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-ver-mas:hover {
@@ -374,10 +380,10 @@ footer i{
 }
 
 .botones-container {
-display: flex;
-flex-direction: column;
-gap: 10px;
-margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .btn-carrito {
@@ -480,7 +486,9 @@ font-size: 16px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   }
 
-  .whatsapp-btn:hover,
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+  }
 
   .btn-carrito:hover {
       transform: scale(1.1);
