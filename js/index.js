@@ -1,6 +1,5 @@
 const productos = [];
 
-// Cargas productos desde productos.json con Fetch
 fetch("productos.json")
     .then(response => {
         if (!response.ok) {
@@ -16,7 +15,7 @@ fetch("productos.json")
         console.error("Error al cargar productos:", error);
     });
 
-// Sinónimos para mejorar la búsqueda
+// para mejorar la búsqueda
 const sinonimos = {
     camiseta: "remera",
     pantalon: "pantalón",
@@ -36,7 +35,7 @@ function normalizarPalabra(palabra) {
     return palabraSinAcentos.toLowerCase();
 }
 
-// Ver productos filtrados
+
 function buscarProductos() {
     const busqueda = document.getElementById("menu-buscar").value.toLowerCase().trim();
     const palabrasBusqueda = busqueda.split(" ").map(normalizarPalabra);
@@ -59,7 +58,6 @@ function buscarProductos() {
     mostrarProductos(productosFiltrados);
 }
 
-// Renderiza los productos
 function mostrarProductos(filtrados) {
     const contenedor = document.querySelector(".lista-productos");
     contenedor.innerHTML = "";
@@ -73,7 +71,7 @@ function mostrarProductos(filtrados) {
     }
 }
 
-// Crea HTML dinámico para un producto
+
 function crearHTMLProducto(producto) {
     return `
         <div class="producto">
@@ -93,12 +91,12 @@ function crearHTMLProducto(producto) {
     `;
 }
 
-// Guarda el carrito en localStorage
+
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-// Carga el carrito desde localStorage
+
 function cargarCarrito() {
     const carritoGuardado = localStorage.getItem("carrito");
     if (carritoGuardado) {
@@ -107,7 +105,7 @@ function cargarCarrito() {
     }
 }
 
-// Agrega un producto al carrito
+
 function agregarAlCarrito(idProducto) {
     const talleSeleccionado = document.getElementById(`talle-${idProducto}`).value;
     const productoEnCarrito = carrito.find(item => item.id === idProducto && item.talle === talleSeleccionado);
@@ -144,13 +142,11 @@ function mostrarCarrito() {
         contenedorCarrito.innerHTML = ""; 
 
     if (carrito.length === 0) {
-        // Mensaje cuando el carrito está vacío
         const mensajeVacio = document.createElement("div");
         mensajeVacio.classList.add("mensaje-carrito-vacio");
         mensajeVacio.innerHTML = `<p>El carrito está vacío.</p>`;
         contenedorCarrito.appendChild(mensajeVacio);
     } else {
-        // Listar productos del carrito
         let total = 0;
         carrito.forEach((producto, index) => {
             const subtotal = producto.precio * producto.cantidad;
