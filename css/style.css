@@ -1,11 +1,17 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+  min-height: 100vh;
   padding: 0;
   background-color: #f5f5f5;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #333;
   color: #fff;
   padding: 20px;
@@ -14,6 +20,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header div {
@@ -32,10 +39,17 @@ header div {
   max-width: 800px;
 }
 
-.container {
+main.container {
+  flex: 1;
   max-width: 1200px;
   margin: auto;
   padding: 20px;
+  box-sizing: border-box;
+}
+
+.container .row {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .section-titulo {
@@ -239,31 +253,43 @@ header div {
   background-color: #0056b3;
 }
 
+
 footer {
-  margin: 0 auto;
-  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 0;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #222;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-footer a{
+footer .row {
+  margin: 0;
+}
+
+footer p, footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: white;
   text-decoration: none;
-  font-size: 15px;
-  border-radius: 15%;
-  padding: 15px;
 }
 
-footer p{
-  font-size: 15px;
-}
-footer a:hover{
-  background-color: #0d6efd;
-}
-
-footer i{
-  font-size: 25px;
+footer ul li a:hover {
+  color: #0d6efd;
 }
 
 .ventana-pedido {
